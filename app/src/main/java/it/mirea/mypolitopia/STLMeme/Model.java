@@ -25,8 +25,11 @@ public class Model {
     float maxZ;
     float minZ;
 
-    // вернуть центральную точку модели
-    // Обратите внимание, что в загруженном исходном коде эта функция изменяется следующим образом.
+    /**
+     * вернуть центральную точку модели
+     * Обратите внимание, что в загруженном исходном коде эта функция изменяется ледующисм образом.
+     * @return
+     */
     public Point getCentrePoint() {
 
         float cx = minX + (maxX - minX) / 2;
@@ -35,7 +38,10 @@ public class Model {
         return new Point(cx, cy, cz);
     }
 
-    // Максимальный радиус модели пакета
+    /**
+     * Максимальный радиус модели пакета
+     * @return
+     */
     public float getR() {
         float dx = (maxX - minX);
         float dy = (maxY - minY);
@@ -48,13 +54,19 @@ public class Model {
         return max;
     }
 
-    // Установите массив вершины при настройке соответствующего буфера
+    /**
+     * Установите массив вершины при настройке соответствующего буфера
+     * @param verts
+     */
     public void setVerts(float[] verts) {
        this.verts = verts;
         vertBuffer = Util.floatToBuffer(verts);
     }
 
-    // Установите вектор массива вершины, установите соответствующий буфер
+    /**
+     * Установите вектор массива вершины, установите соответствующий буфер
+     * @param vnorms
+     */
     public void setVnorms(float[] vnorms) {
         this.vnorms = vnorms;
         vnormBuffer = Util.floatToBuffer(vnorms);
