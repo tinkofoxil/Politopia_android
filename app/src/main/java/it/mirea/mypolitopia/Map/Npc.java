@@ -33,7 +33,9 @@ public class Npc {
         MOVE
     }
 
-    // конструктор
+    /**
+     * конструктор
+     */
     public Npc(NpcType npcType, int level, City city, int x, int y) {
         this.npcType = npcType;
         this.level = level;
@@ -42,12 +44,16 @@ public class Npc {
         this.y = y;
     }
 
-    // метод устанавливает, что нпс сделал ход
+    /**
+     * метод устанавливает, что нпс сделал ход
+     */
     public void makeAction() {
         action = true;
     };
 
-    // метод очистки переменной, отвечающей за то, был ли сделан ход или нет
+    /**
+     * метод очистки переменной, отвечающей за то, был ли сделан ход или нет
+     */
     public void newAction() {
         action = false;
     }
